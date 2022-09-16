@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid;
+    --grid-cols: 3;
+    --grid-rows: 3;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 50px);
+    grid-template-columns: repeat(var(--grid-cols), 50px);
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+.grid-item {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
