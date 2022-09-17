@@ -2,6 +2,11 @@
     border: 1px solid red;
 } */
 
+@font-face {
+    font-family: marioKart;
+    src: url(Mario-Kart-DS.ttf);
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -17,7 +22,8 @@ body {
 h1 {
     text-align: center;
     margin-top: 140px;
-    font-size: 60px;
+    font-size: 80px;
+    font-family: marioKart;
 }
 
 .main-container {
@@ -25,7 +31,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
     margin-bottom: 30px;
 }
 
@@ -45,7 +51,7 @@ h1 {
 }
 
 .instructions {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 #input-box {
