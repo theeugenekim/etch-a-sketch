@@ -8,8 +8,8 @@ window.onload = buttonClick()
 // Functions //
 
 function makeGrid(rows, cols) {
-    let width = 700;
-    let height = 700;
+    let width = 500;
+    let height = 500;
     gridContainer.style.setProperty('--grid-rows', rows);
     gridContainer.style.setProperty('--grid-cols', cols);
     for (i=0; i < (rows*cols); i++) {

@@ -10,12 +10,12 @@
 body {
     height: 100vh;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
     font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: rgb(231, 187, 74);
 }
 
@@ -39,9 +39,9 @@ h1 {
     display: grid;
     grid-template-columns: repeat(var(minmax(100px, 1fr)));
     grid-template-rows: repeat(var(minmax(100px, 1fr)));
-    min-width: 700px;
-    min-height: 700px;
-    margin: 0 auto 200px auto;
+    min-width: 500px;
+    min-height: 500px;
+    margin: 0 auto 100px auto;
     border: 2px solid #9c9fac;
 }
   
@@ -60,4 +60,17 @@ h1 {
 .create-grid {
     font-size: 20px;
     border-radius: 8px;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #1F2937;
+    color: white;
+    font-weight: lighter;;
+    font-family: marioKart;
+    padding: 50px;
+    font-size: 30px;
 }
