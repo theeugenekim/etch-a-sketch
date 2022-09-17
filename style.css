@@ -39,7 +39,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(var(minmax(100px, 1fr)));
     grid-template-rows: repeat(var(minmax(100px, 1fr)));
-    width: 700px;
+    min-width: 700px;
     min-height: 700px;
     margin: 0 auto 200px auto;
     border: 3px solid #9c9fac;
