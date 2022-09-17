@@ -5,6 +5,8 @@ const createGridButton = document.querySelector('.create-grid');
 
 window.onload = buttonClick()
 
+// Functions //
+
 function makeGrid(rows, cols) {
     let width = 700;
     let height = 700;
@@ -18,16 +20,34 @@ function makeGrid(rows, cols) {
     return gridContainer
 };
 
+
 function hover() {
     const gridItem =  document.querySelectorAll('.grid-item');
-    createGridButton.addEventListener('click', buttonClick);
+
+    var colorBrightness = 60
+    var randomColor
 
     gridItem.forEach(item => {
         item.addEventListener('mouseover', () => {
-            item.style.backgroundColor = 'red';
+            if (colorBrightness === 100) {
+                randomColor = Math.floor(Math.random()*16777215).toString(16);
+                item.style.backgroundColor = '#' + randomColor;
+                item.style.filter = "brightness(100%)";
+                colorBrightness -= 10
+            } else if (colorBrightness > 0) {
+                item.style.backgroundColor = '#' + randomColor;
+                item.style.filter = "brightness(" + Math.round(colorBrightness) + "%)";
+                colorBrightness -= 10
+            } else {
+                item.style.backgroundColor = '#' + randomColor;
+                item.style.filter = "brightness(0%)";
+                colorBrightness = 100
+            };
+            console.log(colorBrightness)
         });
     });
-}
+};
+
 
 function validateInput(inputValue) {
     if (inputValue < 1 || inputValue > 100) {
@@ -49,6 +69,7 @@ function displayWarning() {
 function resetGame() {
     // clear all DOM in grid-container node https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
     gridContainer.replaceChildren();
+    colorBrightness = 100
 }
 
 function buttonClick() {
@@ -60,7 +81,6 @@ function buttonClick() {
 
     if (validInput === true) {
         makeGrid(inputValue, inputValue);
-        console.log('hello');
         hover();
     } 
 };
