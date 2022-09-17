@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector('.grid-container');
+const mainContainer = document.querySelector('.main-container');
 const inputValue = document.querySelector('#input-box').value;
 const createGridButton = document.querySelector('.create-grid');
 
@@ -31,14 +32,17 @@ function hover() {
 function validateInput(inputValue) {
     if (inputValue < 1 || inputValue > 100) {
         displayWarning()
+        resetGame()
+        makeGrid(100, 100);
         return false
     } else {
+        document.querySelector(".instructions").style.color = "black";
         return true
     };
 };
 
 function displayWarning() {
-    let label = document.querySelector(".instructions").style.color = "red";
+    document.querySelector(".instructions").style.color = "red";
     return true
 };
 
@@ -48,15 +52,15 @@ function resetGame() {
 }
 
 function buttonClick() {
-    const inputValue = document.querySelector('#input-box').value;
-    const validInput = validateInput(inputValue);
-
     resetGame()
 
-    console.log(inputValue.value)
+    const inputValue = document.querySelector('#input-box').value;
+    const validInput = validateInput(inputValue);
+    
+
     if (validInput === true) {
         makeGrid(inputValue, inputValue);
         console.log('hello');
         hover();
-    };
+    } 
 };

@@ -14,13 +14,19 @@ body {
     background-color: rgb(231, 187, 74);
 }
 
+h1 {
+    text-align: center;
+    margin-top: 140px;
+    font-size: 60px;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 100px;
+    margin-bottom: 30px;
 }
 
 .grid-container {
@@ -31,9 +37,21 @@ body {
     min-height: 700px;
     margin: 0 auto 200px auto;
     border: 3px solid #9c9fac;
-  }
+}
   
 .grid-item {
     background-color: rgb(53, 51, 50);
     border: 1px solid black;
+}
+
+.instructions {
+    font-size: 25px;
+}
+
+#input-box {
+    font-size: 20px;
+}
+.create-grid {
+    font-size: 20px;
+    border-radius: 8px;
 }
